@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,32 +12,49 @@ namespace AnonymousIncome
         {
             Console.WriteLine("Anonymous Income Comparison Program");
             Console.ReadLine();
+            //person1
             Console.WriteLine("Person1");
             Console.ReadLine();
-            int hourlyRate = 15;
+            // hour rate
+            Console.WriteLine("What is the hourly rate?");
+            string hourlyRate = Console.ReadLine();
+            int rate = Convert.ToInt32(hourlyRate);
             Console.WriteLine("Hourly Rate: " + hourlyRate);
             Console.ReadLine();
-            int hoursWorked = 40;
-            Console.WriteLine("Hours worked this week: " + hoursWorked);
+            // hours worked
+            Console.WriteLine("How many hours worked this week?");
+            string hoursWorked = Console.ReadLine();
+            int hours = Convert.ToInt32(hoursWorked);
+            Console.WriteLine("Hours worked this week: " + hours);
             Console.ReadLine();
-            int weekly = hourlyRate * 40;
+            int weekly = rate * 40;
             int annual = weekly * 52;
             Console.WriteLine("Annual Salary: " + annual);
             Console.ReadLine();
 
+
+            // Person2 start
             Console.WriteLine("Person2");
             Console.ReadLine();
-            int hourRate = 20;
+            //hourly rate
+            Console.WriteLine("What is the hourly rate?");
+            string hourRate = Console.ReadLine();
+            int hRate = Convert.ToInt32(hourRate);
             Console.WriteLine("Hourly Rate: " + hourRate);
             Console.ReadLine();
-            int hourWorked = 40;
-            Console.WriteLine("Hours worked this week: " + hourWorked);
+            // hours worked
+            Console.WriteLine("How many hours worked this week?");
+            string hourWorked = Console.ReadLine();
+            int hWorked = Convert.ToInt32(hourWorked);
+            Console.WriteLine("Hours worked this week: " + hWorked);
             Console.ReadLine();
-            int weeklySalary = hourRate * 40;
+            // times salary for 52 weeks
+            int weeklySalary = hRate * 40;
             int annualSalary = weeklySalary * 52;
             Console.WriteLine("Annual Salary: " + annualSalary);
             Console.ReadLine();
 
+            //boolean for Persons
             bool compare = annual > annualSalary;
             Console.WriteLine("Is Person1 Annual income more than Person2? " + compare.ToString());
             Console.ReadLine();
